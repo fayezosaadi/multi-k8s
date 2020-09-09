@@ -13,7 +13,7 @@ before_install:
   - gcloud config set project multi-k8s-288919
   - gcloud config set compute/zone us-west1-a
   - gcloud container clusters get-credentials cluster-multi-k8s
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" -- passwords
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t fayosaadi/react-test -f ./client/Dockerfile.dev ./client
 script:
   - docker run fayosaadi/react-test npm test:ci # run tests
