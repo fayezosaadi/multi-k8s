@@ -1,8 +1,11 @@
 Fibonacci calculator web application
 
 ### Tech stack
-- Nodejs express server
-- React js
+
+###### Services
+- Express js backend server
+- Nodejs js worker application
+- React js UI
 
 ###### Persistent Storage
 - Postgres
