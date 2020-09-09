@@ -16,6 +16,7 @@ spec:
         - name: postgres-storage
           persistentVolumeClaim:
             claimName: database-persistent-volume-claim
+      restartPolicy: Always
       containers:
         - name: postgres
           image: postgres
