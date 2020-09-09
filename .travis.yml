@@ -16,7 +16,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t fayosaadi/react-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run fayosaadi/react-test npm test:ci # run tests
+  - docker run fayosaadi/react-test yarn test:ci
 deploy:
   provider: script
   script: bash ./deploy.sh
